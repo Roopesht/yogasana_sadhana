@@ -1,0 +1,99 @@
+{
+  "app": {
+    "name": "Yoga Sadhana — Daily Practice",
+    "version": "1.0.0",
+    "description": "A modular yoga practice app with step-by-step pose guidance, timers, and session management.",
+    "entry": "index.html"
+  },
+  "modules": [
+    
+    {
+      "name": "audioModule",
+      "file": "modules/audioModule.js",
+      "type": "es-module",
+      "exports": ["playStartBell", "playTransitionBell", "playCompletionBells", "playCountdownBeep"],
+      "description": "Web Audio API-based sound engine. Synthesizes bell and transition tones. No external audio files required."
+    },
+    {
+      "name": "stateModule",
+      "file": "modules/stateModule.js",
+      "type": "es-module",
+      "exports": ["getState", "setState", "subscribe", "resetState"],
+      "description": "Lightweight observable state store. Tracks currentIndex, isPlaying, timeLeft, and sessionStatus."
+    }
+  ],
+  "data": [
+    {
+      "name": "yogasanas",
+      "file": "data/yogasanas.json",
+      "type": "json",
+      "description": "Full sequence of 25 poses: 5 warm-ups, 19 asanas, and 1 Shavasana cool-down. Each pose has name, category, photo key, steps array, duration in seconds, and a benefit description.",
+      "schema": {
+        "id": "string — unique kebab-case identifier",
+        "name": "string — display name",
+        "category": "enum: warmup | asana | cooldown",
+        "photo": "string — key into poseIllustrations module",
+        "steps": "string[] — ordered instructions",
+        "duration": "number — seconds for the pose",
+        "benefit": "string — one-line benefit description"
+      },
+      "counts": {
+        "warmup": 5,
+        "asana": 19,
+        "cooldown": 1,
+        "total": 25
+      }
+    }
+  ],
+  "state": {
+    "shape": {
+      "currentIndex": "number — index into yogasanas array",
+      "isPlaying": "boolean — whether the timer is counting down",
+      "timeLeft": "number — seconds remaining for current pose",
+      "sessionStatus": "not_started | running | paused | completed",
+      "startIndex": "number — the index the session started from"
+    }
+  },
+  "pages": [
+    {
+      "id": "home",
+      "description": "Homepage listing all poses. User can start full session or jump to any pose."
+    },
+    {
+      "id": "slideshow",
+      "description": "Active practice view. Shows illustration, pose name, benefit, steps list, circular timer, and controls."
+    },
+    {
+      "id": "completion",
+      "description": "End-of-session screen with congratulatory message and motivational quote."
+    }
+  ],
+  "sequence": [
+    { "index": 0,  "id": "warmup-breathing",        "category": "warmup",   "duration": 120 },
+    { "index": 1,  "id": "warmup-neck",              "category": "warmup",   "duration": 60  },
+    { "index": 2,  "id": "warmup-shoulder",          "category": "warmup",   "duration": 60  },
+    { "index": 3,  "id": "warmup-waist",             "category": "warmup",   "duration": 90  },
+    { "index": 4,  "id": "warmup-jogging",           "category": "warmup",   "duration": 300 },
+    { "index": 5,  "id": "surya-namaskar",           "category": "asana",    "duration": 120 },
+    { "index": 6,  "id": "matsyasan",                "category": "asana",    "duration": 45  },
+    { "index": 7,  "id": "ardha-matsyendriyasan",    "category": "asana",    "duration": 60  },
+    { "index": 8,  "id": "ushthrasan",               "category": "asana",    "duration": 45  },
+    { "index": 9,  "id": "supta-vajrasan",           "category": "asana",    "duration": 60  },
+    { "index": 10, "id": "uttana-padasan",           "category": "asana",    "duration": 45  },
+    { "index": 11, "id": "naukasan",                 "category": "asana",    "duration": 45  },
+    { "index": 12, "id": "sarvangasan",              "category": "asana",    "duration": 60  },
+    { "index": 13, "id": "halasan",                  "category": "asana",    "duration": 45  },
+    { "index": 14, "id": "marjalasan",               "category": "asana",    "duration": 60  },
+    { "index": 15, "id": "dhanurasana",              "category": "asana",    "duration": 45  },
+    { "index": 16, "id": "natarajasan",              "category": "asana",    "duration": 45  },
+    { "index": 17, "id": "janu-shirshasan",          "category": "asana",    "duration": 60  },
+    { "index": 18, "id": "badha-konasan",            "category": "asana",    "duration": 60  },
+    { "index": 19, "id": "katwangasan",              "category": "asana",    "duration": 45  },
+    { "index": 20, "id": "meru-dandasan",            "category": "asana",    "duration": 60  },
+    { "index": 21, "id": "trataka",                  "category": "asana",    "duration": 120 },
+    { "index": 22, "id": "setu-bandhasana",          "category": "asana",    "duration": 60  },
+    { "index": 23, "id": "mandukasan",               "category": "asana",    "duration": 60  },
+    { "index": 24, "id": "anjaneyasana",             "category": "asana",    "duration": 60  },
+    { "index": 25, "id": "shavasana",                "category": "cooldown", "duration": 300 }
+  ]
+}

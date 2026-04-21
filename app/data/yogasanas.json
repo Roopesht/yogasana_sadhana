@@ -1,0 +1,438 @@
+[
+  {
+    "id": "warmup-breathing",
+    "name": "Warm Up — Deep Breathing",
+    "category": "warmup",
+    "photo": "warmup_breathing.svg",
+    "steps": [
+      "Stand tall with feet hip-width apart and arms relaxed at your sides.",
+      "Inhale slowly through your nose for 4 counts, letting your belly rise.",
+      "Hold for 2 counts, then exhale through your mouth for 6 counts.",
+      "Repeat 5–6 cycles, gradually deepening each breath.",
+      "Feel your body awaken and your mind become present."
+    ],
+    "duration": 120,
+    "benefit": "Oxygenates the body and centers the mind before practice"
+  },
+  {
+    "id": "warmup-neck",
+    "name": "Warm Up — Neck Rolls",
+    "category": "warmup",
+    "photo": "neckrolls.png",
+    "steps": [
+      "Sit or stand with your spine tall and shoulders relaxed.",
+      "Slowly drop your right ear toward your right shoulder. Hold 5 seconds.",
+      "Roll your chin down to your chest, then left ear to left shoulder.",
+      "Complete 3 slow full rotations in each direction.",
+      "Never roll the head backward — keep movements gentle and controlled."
+    ],
+    "duration": 60,
+    "benefit": "Releases tension in the neck and upper trapezius"
+  },
+  {
+    "id": "warmup-shoulder",
+    "name": "Warm Up — Shoulder Circles",
+    "category": "warmup",
+    "photo": "warmup_shoulder.svg",
+    "steps": [
+      "Stand with feet hip-width apart, arms loose at your sides.",
+      "Lift both shoulders up toward your ears, then roll them back and down.",
+      "Make large, slow circles — 10 rotations backward, then 10 forward.",
+      "Focus on maximum range of motion, especially rolling them back.",
+      "Feel the chest open and the shoulder blades draw together."
+    ],
+    "duration": 60,
+    "benefit": "Loosens the shoulder joint and opens the chest"
+  },
+  {
+    "id": "warmup-waist",
+    "name": "Warm Up — Waist Rotations",
+    "category": "warmup",
+    "photo": "warmup_waist.svg",
+    "steps": [
+      "Stand with feet shoulder-width apart, hands on hips.",
+      "Keep your hips stable as you rotate your upper body to the right.",
+      "Come back to center, then rotate to the left. This is one rep.",
+      "Gradually increase the range of motion with each rotation.",
+      "Complete 15 rotations on each side, breathing freely."
+    ],
+    "duration": 90,
+    "benefit": "Warms up the lumbar spine and obliques"
+  },
+  {
+    "id": "warmup-jogging",
+    "name": "Warm Up — Jogging in Place",
+    "category": "warmup",
+    "photo": "warmup_jogging.svg",
+    "steps": [
+      "Begin jogging in place at a comfortable, relaxed pace.",
+      "Land softly on the balls of your feet to protect your knees.",
+      "Swing your arms naturally to build momentum and raise your heart rate.",
+      "After 2 minutes, increase pace slightly for the last 3 minutes.",
+      "Focus on steady breathing — inhale through the nose, exhale through the mouth."
+    ],
+    "duration": 300,
+    "benefit": "Elevates heart rate and warms all muscle groups"
+  },
+  {
+    "id": "surya-namaskar",
+    "name": "Surya Namaskar",
+    "category": "asana",
+    "photo": "surya_namaskar.svg",
+    "steps": [
+      "Begin in Pranamasana (prayer pose) — stand at the mat's edge, feet together, palms at chest.",
+      "Inhale: raise arms overhead into Hastauttanasana, gently arching the back.",
+      "Exhale: fold forward into Hastapadasana, touching the floor beside your feet.",
+      "Inhale: step the right foot back into a low lunge (Ashwa Sanchalanasana).",
+      "Exhale: step the left foot back into Phalakasana (plank). Breathe steadily.",
+      "Lower knees, chest, and chin to the mat — Ashtanga Namaskara.",
+      "Inhale: glide forward into Bhujangasana (cobra), lifting the chest.",
+      "Exhale: lift hips high into Adho Mukha Svanasana (downward dog). Hold 5 breaths.",
+      "Inhale: step the right foot forward into a lunge. Exhale: bring the left foot to meet it.",
+      "Inhale: rise slowly, sweeping arms overhead. Exhale: return to Pranamasana."
+    ],
+    "duration": 120,
+    "benefit": "Full-body awakening — stretches, strengthens, and energizes every system"
+  },
+  {
+    "id": "matsyasan",
+    "name": "Matsyasan",
+    "category": "asana",
+    "photo": "matsyasan.svg",
+    "steps": [
+      "Lie flat on your back with legs extended and arms alongside your body.",
+      "Slide your hands under your hips, palms facing down.",
+      "Press your elbows into the floor and inhale to lift your chest off the mat.",
+      "Tilt your head back and gently rest the crown of the head on the mat.",
+      "Keep most of the weight on your elbows — avoid straining the neck.",
+      "Breathe deeply into the chest, feeling it open and expand.",
+      "Hold the pose steadily for the duration, then gently release by lifting the head first."
+    ],
+    "duration": 45,
+    "benefit": "Opens the chest and throat, counteracts forward-hunching postures"
+  },
+  {
+    "id": "ardha-matsyendriyasan",
+    "name": "Ardha Matsyendriyasan",
+    "category": "asana",
+    "photo": "ardha_matsyendriyasan.svg",
+    "steps": [
+      "Sit with both legs extended in front of you (Dandasana).",
+      "Bend your right knee and place the right foot flat on the floor outside the left thigh.",
+      "Bend your left knee and tuck the left foot near your right hip.",
+      "Inhale and sit tall, lengthening your spine upward.",
+      "Exhale and twist to the right, wrapping your left arm around your right knee.",
+      "Place your right hand on the floor behind your right hip for support.",
+      "With each inhale, grow taller; with each exhale, deepen the twist gently.",
+      "Hold, then release and repeat on the opposite side."
+    ],
+    "duration": 60,
+    "benefit": "Massages abdominal organs, improves spinal mobility and digestion"
+  },
+  {
+    "id": "ushthrasan",
+    "name": "Ushthrasan",
+    "category": "asana",
+    "photo": "ushthrasan.svg",
+    "steps": [
+      "Kneel on your mat with knees hip-width apart and thighs perpendicular to the floor.",
+      "Place your hands on your lower back, fingers pointing downward, for initial support.",
+      "Inhale and lift through your chest, drawing the shoulder blades together.",
+      "Slowly lean back, reaching one hand at a time toward your heels.",
+      "Let your head fall back gently — only if there is no neck strain.",
+      "Push your hips forward to keep them above the knees; avoid collapsing.",
+      "Breathe deeply into your chest. To release, bring hands to hips and rise on an inhale."
+    ],
+    "duration": 45,
+    "benefit": "Deep chest and hip flexor opener, energizes the spine"
+  },
+  {
+    "id": "supta-vajrasan",
+    "name": "Supta Vajrasan",
+    "category": "asana",
+    "photo": "supta_vajrasan.svg",
+    "steps": [
+      "Begin in Vajrasana — sit on your heels with the spine straight.",
+      "Place your hands behind you, fingers pointing forward, and lean back onto your elbows.",
+      "Continue lowering until the crown of your head or the back of your head rests on the mat.",
+      "Cross your arms over your chest or extend them overhead on the floor.",
+      "Keep the knees on the mat — if they lift, place a folded blanket under them.",
+      "Relax your facial muscles and breathe slowly and deeply.",
+      "To come out, use your elbows to gradually lift yourself back to Vajrasana."
+    ],
+    "duration": 60,
+    "benefit": "Stretches quadriceps and hip flexors; improves digestion"
+  },
+  {
+    "id": "uttana-padasan",
+    "name": "Uttana Padasan",
+    "category": "asana",
+    "photo": "uttana_padasan.svg",
+    "steps": [
+      "Lie on your back with legs extended and arms flat alongside your body.",
+      "Press your lower back firmly into the mat and engage your core.",
+      "Inhale and slowly raise both legs together to a 45-degree angle.",
+      "Point your toes forward and keep your legs straight and together.",
+      "Hold the position without letting the legs drop, breathing steadily.",
+      "If needed, you may also raise your head and shoulders slightly off the mat.",
+      "Slowly lower the legs on an exhale. Rest, then repeat 3–4 times."
+    ],
+    "duration": 45,
+    "benefit": "Strengthens the core and lower abdominal muscles"
+  },
+  {
+    "id": "naukasan",
+    "name": "Naukasan",
+    "category": "asana",
+    "photo": "naukasan.svg",
+    "steps": [
+      "Lie flat on your back with legs together and arms at your sides.",
+      "Inhale deeply. On the exhale, simultaneously lift your head, shoulders, arms, and legs off the mat.",
+      "Balance on your tailbone — your body should form a V shape.",
+      "Extend your arms forward, parallel to the floor, fingers pointing toward your feet.",
+      "Hold the gaze forward or slightly upward. Keep breathing — do not hold your breath.",
+      "Maintain the position as long as comfortable, then slowly lower back down.",
+      "Relax in Shavasana for a few breaths before repeating."
+    ],
+    "duration": 45,
+    "benefit": "Tones the entire core, improves balance and concentration"
+  },
+  {
+    "id": "sarvangasan",
+    "name": "Sarvangasan",
+    "category": "asana",
+    "photo": "sarvangasan.svg",
+    "steps": [
+      "Lie on your back. Bend your knees and draw them toward your chest.",
+      "Use your hands to support your lower back as you lift your hips off the floor.",
+      "Straighten your legs upward toward the ceiling, forming a straight line.",
+      "Your weight should rest on the back of your shoulders and upper arms — not on your neck.",
+      "Keep your elbows close together and support your back with both hands.",
+      "Gaze up at your toes and breathe slowly. Avoid turning your head.",
+      "To release, bend your knees to your chest and roll down one vertebra at a time."
+    ],
+    "duration": 60,
+    "benefit": "Stimulates the thyroid, improves circulation and calms the nervous system"
+  },
+  {
+    "id": "halasan",
+    "name": "Halasan",
+    "category": "asana",
+    "photo": "halasan.svg",
+    "steps": [
+      "From Sarvangasan, begin to lower your legs overhead behind you.",
+      "Let your toes touch the floor behind your head, if comfortable.",
+      "Keep supporting your back with your hands, or extend your arms flat on the mat.",
+      "If your toes don't reach the floor, maintain them where they are without forcing.",
+      "Keep the legs straight and active. Breathe long and slow.",
+      "Hold the position, then slowly roll down vertebra by vertebra with control.",
+      "Rest in Shavasana to allow the spine to decompress."
+    ],
+    "duration": 45,
+    "benefit": "Deep spinal stretch, calms the nervous system and improves flexibility"
+  },
+  {
+    "id": "marjalasan",
+    "name": "Marjalasan",
+    "category": "asana",
+    "photo": "marjalasan.svg",
+    "steps": [
+      "Begin on all fours — wrists under shoulders, knees under hips (Table Top).",
+      "Inhale: drop your belly toward the floor, lift your chest and tailbone (Cow).",
+      "Exhale: round your spine toward the ceiling, tuck chin to chest (Cat).",
+      "Move fluidly between Cat and Cow, one full breath per movement.",
+      "Keep the movement slow and deliberate — let the breath lead the motion.",
+      "Feel each vertebra articulate as you wave through the spine.",
+      "Complete 10 full Cat-Cow cycles, then rest in Child's Pose."
+    ],
+    "duration": 60,
+    "benefit": "Mobilizes the entire spine, relieves back tension"
+  },
+  {
+    "id": "dhanurasana",
+    "name": "Dhanurasana",
+    "category": "asana",
+    "photo": "dhanurasana.svg",
+    "steps": [
+      "Lie on your stomach with your chin resting on the mat, arms at your sides.",
+      "Bend both knees and bring your heels toward your buttocks.",
+      "Reach back with both hands and firmly grasp your ankles (not toes).",
+      "Inhale and simultaneously lift your chest and thighs off the mat.",
+      "Your body should form the shape of a bow — head up, legs pulling upward.",
+      "Keep pressing the ankles back into your hands to deepen the arch.",
+      "Rock gently with the breath if desired. Release slowly on an exhale."
+    ],
+    "duration": 45,
+    "benefit": "Full back-body stretch, opens the chest and hip flexors"
+  },
+  {
+    "id": "natarajasan",
+    "name": "Natarajasan",
+    "category": "asana",
+    "photo": "natarajasan.svg",
+    "steps": [
+      "Stand tall in Tadasana. Shift your weight onto your left foot.",
+      "Bend your right knee and bring the right heel toward your right buttock.",
+      "Reach back with your right hand and hold the inside of your right ankle or foot.",
+      "Inhale and raise your left arm forward and upward, parallel to the floor.",
+      "Kick your right foot back and up, lifting the leg while leaning slightly forward.",
+      "Your body will tilt into a graceful arch — find a focal point (drishti) to balance.",
+      "Hold, then release with control. Repeat on the left side."
+    ],
+    "duration": 45,
+    "benefit": "Improves balance, stretches the chest, shoulders, and hip flexors"
+  },
+  {
+    "id": "janu-shirshasan",
+    "name": "Janu Shirshasan",
+    "category": "asana",
+    "photo": "janu_shirshasan.svg",
+    "steps": [
+      "Sit in Dandasana with both legs extended. Bend your right knee.",
+      "Place the sole of your right foot against your inner left thigh.",
+      "Inhale and extend your spine tall, raising your arms overhead.",
+      "Exhale and hinge forward from your hips over your extended left leg.",
+      "Hold your left foot, ankle, or calf — wherever you can reach without rounding the back.",
+      "With each inhale, lengthen the spine; with each exhale, fold a little deeper.",
+      "Hold, then switch sides — extend the right leg and bend the left."
+    ],
+    "duration": 60,
+    "benefit": "Deep hamstring and lower back stretch, calms the mind"
+  },
+  {
+    "id": "badha-konasan",
+    "name": "Badha Konasan",
+    "category": "asana",
+    "photo": "badha_konasan.svg",
+    "steps": [
+      "Sit upright with both legs extended. Bend both knees and bring the soles of your feet together.",
+      "Draw your heels as close toward your pelvis as is comfortable.",
+      "Hold your feet with both hands, interlacing the fingers around them.",
+      "Sit tall and press your knees gently toward the floor — never force them down.",
+      "Inhale and lengthen the spine. If comfortable, hinge slightly forward from the hips.",
+      "Breathe slowly and allow the inner thighs to gradually release.",
+      "Hold, then gently use your hands to lift the knees before extending the legs."
+    ],
+    "duration": 60,
+    "benefit": "Opens the hips and groin, stimulates the reproductive and urinary organs"
+  },
+  {
+    "id": "katwangasan",
+    "name": "Katwangasan",
+    "category": "asana",
+    "photo": "katwangasan.svg",
+    "steps": [
+      "Begin in Dandasana. Bend both knees and bring them toward your chest.",
+      "Lean back slightly, balancing on your tailbone with the spine tall.",
+      "Extend both arms forward, parallel to the floor, at shoulder height.",
+      "Slowly extend the legs upward and forward at a 45–60 degree angle.",
+      "Your body forms a V — balance on the sit bones, not the tailbone.",
+      "Keep the core engaged and the chest open. Breathe steadily.",
+      "Hold, then lower the legs slowly and rest."
+    ],
+    "duration": 45,
+    "benefit": "Strengthens the core and hip flexors, improves balance"
+  },
+  {
+    "id": "meru-dandasan",
+    "name": "Meru Dandasan",
+    "category": "asana",
+    "photo": "meru_dandasan.svg",
+    "steps": [
+      "Lie on your back with arms extended at shoulder level forming a T.",
+      "Bend your right knee and place the right foot flat on the floor.",
+      "Inhale, and on the exhale, slowly drop the right knee across the body to the left.",
+      "Turn your head to the right, creating a gentle spinal twist.",
+      "Keep both shoulders flat on the floor — do not let the right shoulder lift.",
+      "Breathe into the twist, relaxing deeper with each exhale.",
+      "Return to center and repeat on the other side."
+    ],
+    "duration": 60,
+    "benefit": "Releases the lumbar spine and sacrum, reduces lower back tension"
+  },
+  {
+    "id": "trataka",
+    "name": "Trataka",
+    "category": "asana",
+    "photo": "trataka.svg",
+    "steps": [
+      "Sit in a comfortable meditation posture — Sukhasana or Vajrasana.",
+      "Place a candle flame at eye level, about 60–90 cm in front of you.",
+      "Gaze softly and steadily at the tip of the flame without blinking.",
+      "If tears form, that is natural — allow the eyes to release tension.",
+      "When you must blink, close the eyes gently and visualize the flame internally.",
+      "When the image fades, open the eyes and resume steady gazing.",
+      "Continue the practice with complete stillness of body and breath."
+    ],
+    "duration": 120,
+    "benefit": "Improves concentration, strengthens eye muscles, calms the mind"
+  },
+  {
+    "id": "setu-bandhasana",
+    "name": "Setu Bandhasana",
+    "category": "asana",
+    "photo": "setu_bandhasana.svg",
+    "steps": [
+      "Lie on your back with knees bent, feet flat on the floor hip-width apart.",
+      "Place your feet close to your buttocks — about a hand's width away.",
+      "Arms rest flat beside your body, palms facing down.",
+      "Inhale and press your feet and arms into the floor, lifting your hips upward.",
+      "Interlace your fingers beneath your lifted hips and press the arms down.",
+      "Roll your shoulders underneath you to open the chest further.",
+      "Hold, breathing into the chest, then slowly lower vertebra by vertebra on an exhale."
+    ],
+    "duration": 60,
+    "benefit": "Strengthens the back and glutes, opens the chest and hip flexors"
+  },
+  {
+    "id": "mandukasan",
+    "name": "Mandukasan",
+    "category": "asana",
+    "photo": "mandukasan.svg",
+    "steps": [
+      "Begin in Vajrasana. Make fists with both hands, placing the thumbs inside.",
+      "Place both fists on your lower abdomen, on either side of your navel.",
+      "Inhale deeply. On the exhale, lean forward pressing the fists into the abdomen.",
+      "Look forward and hold the position while retaining the exhale (Bahir Kumbhaka).",
+      "Hold as long as comfortable, then inhale and return to upright Vajrasana.",
+      "Relax for a few breaths before repeating. Complete 3–5 rounds.",
+      "Avoid this pose if you have recent abdominal surgery or ulcers."
+    ],
+    "duration": 60,
+    "benefit": "Massages the pancreas and abdominal organs, supports diabetes management"
+  },
+  {
+    "id": "anjaneyasana",
+    "name": "Anjaneyasana",
+    "category": "asana",
+    "photo": "anjaneyasana.svg",
+    "steps": [
+      "Start in Downward Dog. Step your right foot forward between your hands.",
+      "Lower your left knee to the mat and slide it back until you feel a stretch in the left hip flexor.",
+      "Untuck the left toes and press the top of the left foot into the mat.",
+      "Inhale and raise both arms alongside your ears, palms facing each other.",
+      "Lift through the chest and engage the core to protect the lower back.",
+      "Gently draw the tailbone down and the pubic bone forward.",
+      "Hold and breathe, then return to Downward Dog and repeat on the left side."
+    ],
+    "duration": 60,
+    "benefit": "Deep hip flexor stretch, builds strength and opens the heart"
+  },
+  {
+    "id": "shavasana",
+    "name": "Shavasana",
+    "category": "cooldown",
+    "photo": "shavasana.svg",
+    "steps": [
+      "Lie flat on your back, allowing your feet to fall open naturally.",
+      "Let your arms rest away from your body, palms facing upward.",
+      "Close your eyes and release all effort from every muscle in your body.",
+      "Begin a body scan: consciously relax your feet, calves, thighs, hips, abdomen...",
+      "Continue releasing the chest, shoulders, arms, neck, jaw, and forehead.",
+      "Breathe naturally without controlling the breath. Simply observe.",
+      "Remain completely still and surrender to stillness for the full duration."
+    ],
+    "duration": 300,
+    "benefit": "Integrates the practice, restores the nervous system, deepens relaxation"
+  }
+]

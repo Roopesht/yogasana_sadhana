@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Yoga Sadhana — Daily Practice</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+<div id="app">
+  <!-- HEADER -->
+  <header class="app-header">
+    <div class="app-logo">Yoga <span>Sadhana</span></div>
+    <div class="header-subtitle">Daily Practice</div>
+  </header>
+
+  <!-- PAGE: HOME -->
+  <div id="page-home" class="page active">
+    <div class="homepage">
+      <div class="homepage-hero">
+        <h1>Your Daily<br/><em class="serif-italic" style="color:var(--sage)">Yoga Practice</em></h1>
+        <p>A mindfully sequenced session — from warm-up to deep asanas and final rest. Begin at any pose.</p>
+        <div class="session-summary">
+          <div class="summary-pill"><span class="dot" style="background:var(--warmup-color)"></span> 5 Warm-ups</div>
+          <div class="summary-pill"><span class="dot" style="background:var(--sage)"></span> 19 Asanas</div>
+          <div class="summary-pill"><span class="dot" style="background:var(--cooldown-color)"></span> 1 Cool-down</div>
+          <div class="summary-pill" id="total-duration-pill">⏱ Loading...</div>
+        </div>
+      </div>
+      <div id="pose-list-container"></div>
+    </div>
+  </div>
+
+  <!-- PAGE: SLIDESHOW -->
+  <div id="page-slideshow" class="page">
+    <div class="slideshow-page">
+      <div class="progress-track">
+        <div class="progress-fill" id="progress-fill"></div>
+      </div>
+      <div class="slide-container" id="slide-container"></div>
+      <div class="controls-bar">
+        <button class="ctrl-btn" id="btn-prev" onclick="App.prev()">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+          Previous
+        </button>
+        <div class="timer-compact">
+          <div class="timer-ring-wrap-compact">
+            <svg viewBox="0 0 60 60" width="60" height="60">
+              <circle class="timer-ring-bg" cx="30" cy="30" r="25"/>
+              <circle class="timer-ring-fill" id="timer-ring" cx="30" cy="30" r="25"
+                stroke-dasharray="157" stroke-dashoffset="0"/>
+            </svg>
+            <div class="timer-text-compact">
+              <span class="timer-seconds-compact" id="timer-display">0</span>
+              <span class="timer-label-compact">s</span>
+            </div>
+          </div>
+          <div class="timer-info-compact">
+            <div class="timer-status-compact" id="timer-status">Ready</div>
+            <div class="timer-pose-counter-compact" id="pose-counter"></div>
+          </div>
+        </div>
+        <button class="ctrl-btn primary" id="btn-playpause" onclick="App.togglePlay()">
+          <svg id="play-icon" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          <svg id="pause-icon" viewBox="0 0 24 24" fill="currentColor" style="display:none"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+          <span id="playpause-label">Start</span>
+        </button>
+        <button class="ctrl-btn" id="btn-next" onclick="App.next()">
+          Next
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+        </button>
+        <button class="ctrl-btn" onclick="App.goHome()" style="margin-left:1rem">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+          Home
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- PAGE: COMPLETION -->
+  <div id="page-completion" class="page">
+    <div class="completion-page">
+      <div class="completion-card">
+        <div class="completion-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/>
+            <path d="M9 12l2 2 4-4"/>
+          </svg>
+        </div>
+        <h2>Practice Complete</h2>
+        <p>You have completed your yoga session. Your body has been stretched, strengthened, and renewed. Take a moment to feel the stillness within.</p>
+        <p style="font-size:0.9rem">Consistency is the seed of transformation. Return to your mat tomorrow — each practice builds upon the last.</p>
+        <div class="completion-quote">
+          "Yoga is the journey of the self, through the self, to the self."<br/>
+          <span style="font-size:0.85rem;font-style:normal;color:var(--text-muted)">— The Bhagavad Gita</span>
+        </div>
+        <button class="restart-btn" onclick="App.goHome()">Return to Home</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Load modules as ES modules via inline script -->
+<script type="module">
+  // ── Inline state module ──────────────────────────
+  const initialState = {
+    currentIndex: 0,
+    isPlaying: false,
+    timeLeft: 0,
+    sessionStatus: 'not_started',
+    startIndex: 0,
+  };
+  let appState = { ...initialState };
+
+  // ── Inline audio module ──────────────────────────
+  let audioCtx = null;
+  function getCtx() {
+    if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+    return audioCtx;
+  }
+  function playTone(freq, dur, type = 'sine', peak = 0.35) {
+    try {
+      const ctx = getCtx();
+      const osc = ctx.createOscillator();
+      const gain = ctx.createGain();
+      osc.connect(gain); gain.connect(ctx.destination);
+      osc.type = type; osc.frequency.setValueAtTime(freq, ctx.currentTime);
+      gain.gain.setValueAtTime(0, ctx.currentTime);
+      gain.gain.linearRampToValueAtTime(peak, ctx.currentTime + 0.01);
+      gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + dur);
+      osc.start(ctx.currentTime); osc.stop(ctx.currentTime + dur);
+    } catch(e) {}
+  }
+  const Audio = {
+    start: () => { playTone(528, 2.5); setTimeout(() => playTone(660, 2.0, 'sine', 0.2), 80); },
+    transition: () => { playTone(440, 1.8); setTimeout(() => playTone(550, 1.4, 'sine', 0.15), 100); },
+    complete: () => { playTone(440,1.5); setTimeout(()=>playTone(528,1.5),500); setTimeout(()=>playTone(660,2.0,'sine',0.35),1000); },
+    beep: () => playTone(880, 0.1, 'square', 0.05),
+  };
+
+  // ── Illustrations (inline SVG strings) ──────────
+  const ILLUS = {
+    warmup_breathing: '<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="40" fill="#e8f0f8" stroke="#5b7fa6" stroke-width="2"/><text x="50" y="55" text-anchor="middle" font-size="24" fill="#5b7fa6">🫁</text></svg>',
+    surya_namaskar: '<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="40" fill="#eef4ef" stroke="#5a7a5e" stroke-width="2"/><text x="50" y="55" text-anchor="middle" font-size="24" fill="#5a7a5e">☀️</text></svg>',
+    shavasana: '<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="40" fill="#f0e8f8" stroke="#7a5c8a" stroke-width="2"/><text x="50" y="55" text-anchor="middle" font-size="24" fill="#7a5c8a">😴</text></svg>',
+  };
+
+  // ── Load data ────────────────────────────────────
+  let yogasanas = [];
+
+  async function loadData() {
+    try {
+      const res = await fetch('./data/yogasanas.json');
+      yogasanas = await res.json();
+    } catch(e) {
+      console.warn('Failed to load data, using fallback', e);
+      // Fallback: minimal sample if fetch fails
+      yogasanas = [
+        { id:"warmup-breathing", name:"Warm Up — Deep Breathing", category:"warmup", photo:"warmup_breathing", steps:["Stand tall and breathe deeply for 2 minutes."], duration:120, benefit:"Oxygenates the body" },
+        { id:"surya-namaskar", name:"Surya Namaskar", category:"asana", photo:"surya_namaskar", steps:["Perform 12 steps of the sun salutation sequence."], duration:120, benefit:"Full-body awakening" },
+        { id:"shavasana", name:"Shavasana", category:"cooldown", photo:"shavasana", steps:["Lie flat and rest completely."], duration:300, benefit:"Deep relaxation" }
+      ];
+    }
+    init();
+  }
+
+  // ── Utilities ────────────────────────────────────
+  function fmtTime(s) {
+    const m = Math.floor(s / 60);
+    const sec = s % 60;
+    return m > 0 ? `${m}m ${sec}s` : `${s}s`;
+  }
+  function getCatClass(cat) {
+    return { warmup:'cat-warmup', asana:'cat-asana', cooldown:'cat-cooldown' }[cat] || 'cat-asana';
+  }
+  function getCatLabel(cat) {
+    return { warmup:'Warm-Up', asana:'Asana', cooldown:'Cool-Down' }[cat] || cat;
+  }
+
+  // ── Timer engine ─────────────────────────────────
+  let timerInterval = null;
+
+  function startTimer() {
+    clearInterval(timerInterval);
+    timerInterval = setInterval(() => {
+      if (!appState.isPlaying) return;
+      appState.timeLeft--;
+      if (appState.timeLeft <= 5 && appState.timeLeft > 0) Audio.beep();
+      if (appState.timeLeft <= 0) {
+        clearInterval(timerInterval);
+        autoNext();
+      }
+      renderTimer();
+    }, 1000);
+  }
+
+  function stopTimer() { clearInterval(timerInterval); }
+
+  function autoNext() {
+    if (appState.currentIndex < yogasanas.length - 1) {
+      appState.currentIndex++;
+      appState.timeLeft = yogasanas[appState.currentIndex].duration;
+      Audio.transition();
+      renderSlide();
+      startTimer();
+    } else {
+      appState.sessionStatus = 'completed';
+      appState.isPlaying = false;
+      stopTimer();
+      showPage('completion');
+      Audio.complete();
+    }
+  }
+
+  // ── Render: Timer ────────────────────────────────
+  function renderTimer() {
+    const pose = yogasanas[appState.currentIndex];
+    if (!pose) return;
+    const total = pose.duration;
+    const left = appState.timeLeft;
+    const circumference = 2 * Math.PI * 25; // r=25 (compact timer)
+    const offset = circumference * (1 - left / total);
+
+    document.getElementById('timer-display').textContent = left;
+    document.getElementById('timer-ring').style.strokeDashoffset = offset;
+
+    // Change color when < 10s
+    const ring = document.getElementById('timer-ring');
+    if (left <= 10) ring.style.stroke = '#c9863a';
+    else if (left <= 30) ring.style.stroke = '#8aab8e';
+    else ring.style.stroke = 'var(--sage)';
+
+    document.getElementById('timer-status').textContent =
+      appState.isPlaying ? 'Holding pose...' : (appState.sessionStatus === 'not_started' ? 'Ready to begin' : 'Paused');
+    document.getElementById('pose-counter').textContent =
+      `Pose ${appState.currentIndex + 1} of ${yogasanas.length}`;
+  }
+
+  // ── Render: Slide ────────────────────────────────
+  function renderSlide() {
+    const pose = yogasanas[appState.currentIndex];
+    if (!pose) return;
+
+    const total = yogasanas.length;
+    const progress = ((appState.currentIndex + 1) / total) * 100;
+    document.getElementById('progress-fill').style.width = progress + '%';
+
+    const illus = `<img src="images/${pose.photo}" alt="${pose.name}" class="pose-img" />`;
+    const stepsHTML = pose.steps.map((s, i) =>
+      `<li class="step-item" data-idx="${i}">
+        <span class="step-num">${i + 1}</span>
+        <span>${s}</span>
+      </li>`
+    ).join('');
+
+    document.getElementById('slide-container').innerHTML = `
+      <div class="slide-left">
+        <div class="pose-illustration">${illus}</div>
+        <span class="category-tag ${getCatClass(pose.category)}">${getCatLabel(pose.category)}</span>
+      </div>
+      <div class="slide-right slide-transition">
+        <div>
+          <div class="slide-pose-name">
+            <em>Pose ${appState.currentIndex + 1}</em>
+            ${pose.name}
+          </div>
+        </div>
+        <div class="benefit-card">${pose.benefit}</div>
+        <div class="steps-section">
+          <h4>How to practice</h4>
+          <ul class="steps-list">${stepsHTML}</ul>
+        </div>
+      </div>
+    `;
+
+    // Staggered step reveal
+    setTimeout(() => {
+      document.querySelectorAll('.step-item').forEach((el, i) => {
+        setTimeout(() => el.classList.add('visible'), i * 80);
+      });
+    }, 100);
+
+    renderTimer();
+    renderControls();
+  }
+
+  // ── Render: Controls ─────────────────────────────
+  function renderControls() {
+    const btnPrev = document.getElementById('btn-prev');
+    const btnNext = document.getElementById('btn-next');
+    const playIcon = document.getElementById('play-icon');
+    const pauseIcon = document.getElementById('pause-icon');
+    const label = document.getElementById('playpause-label');
+
+    if (btnPrev) btnPrev.disabled = appState.currentIndex === 0;
+    if (btnNext) btnNext.disabled = appState.currentIndex === yogasanas.length - 1;
+
+    if (appState.isPlaying) {
+      if (playIcon) playIcon.style.display = 'none';
+      if (pauseIcon) pauseIcon.style.display = 'block';
+      if (label) label.textContent = 'Pause';
+    } else {
+      if (playIcon) playIcon.style.display = 'block';
+      if (pauseIcon) pauseIcon.style.display = 'none';
+      if (label) label.textContent = appState.sessionStatus === 'not_started' ? 'Start' : 'Resume';
+    }
+  }
+
+  // ── Render: Homepage ──────────────────────────────
+  function renderHomepage() {
+    const totalSec = yogasanas.reduce((acc, p) => acc + p.duration, 0);
+    document.getElementById('total-duration-pill').innerHTML =
+      `⏱ ~${Math.round(totalSec / 60)} min total`;
+
+    let currentCat = null;
+    let html = '';
+    yogasanas.forEach((pose, i) => {
+      if (pose.category !== currentCat) {
+        currentCat = pose.category;
+        if (i > 0) html += '</div>';
+        html += `<div class="section-label">${getCatLabel(currentCat)}</div><div class="pose-list">`;
+      }
+      const illus = ILLUS[pose.photo] || ILLUS['warmup_breathing'];
+      html += `
+        <div class="pose-item" onclick="App.startFrom(${i})">
+          <div class="pose-number ${getCatClass(pose.category)}">${i + 1}</div>
+          <div class="pose-thumb">${illus}</div>
+          <div class="pose-info">
+            <h3>${pose.name}</h3>
+            <div class="pose-meta">
+              <span>${pose.steps.length} steps</span>
+              <span class="pose-duration-badge">⏱ ${fmtTime(pose.duration)}</span>
+            </div>
+          </div>
+          <span class="pose-arrow">›</span>
+        </div>`;
+    });
+    html += '</div>';
+    html += `<div style="text-align:center;padding:0 1.5rem"><button class="begin-btn" onclick="App.startFrom(0)">Begin Full Session</button></div>`;
+    document.getElementById('pose-list-container').innerHTML = html;
+  }
+
+  // ── Page navigation ───────────────────────────────
+  function showPage(id) {
+    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+    document.getElementById(`page-${id}`).classList.add('active');
+  }
+
+  // ── Public API (App object) ───────────────────────
+  window.App = {
+    startFrom(index) {
+      appState.currentIndex = index;
+      appState.startIndex = index;
+      appState.timeLeft = yogasanas[index].duration;
+      appState.isPlaying = true;
+      appState.sessionStatus = 'running';
+      showPage('slideshow');
+      renderSlide();
+      Audio.start();
+      startTimer();
+    },
+    togglePlay() {
+      if (appState.sessionStatus === 'not_started') {
+        appState.sessionStatus = 'running';
+      }
+      appState.isPlaying = !appState.isPlaying;
+      if (appState.isPlaying) {
+        startTimer();
+      } else {
+        stopTimer();
+        appState.sessionStatus = 'paused';
+      }
+      renderControls();
+      renderTimer();
+    },
+    next() {
+      if (appState.currentIndex < yogasanas.length - 1) {
+        stopTimer();
+        appState.currentIndex++;
+        appState.timeLeft = yogasanas[appState.currentIndex].duration;
+        Audio.transition();
+        renderSlide();
+        if (appState.isPlaying) startTimer();
+      }
+    },
+    prev() {
+      if (appState.currentIndex > 0) {
+        stopTimer();
+        appState.currentIndex--;
+        appState.timeLeft = yogasanas[appState.currentIndex].duration;
+        renderSlide();
+        if (appState.isPlaying) startTimer();
+      }
+    },
+    goHome() {
+      stopTimer();
+      appState.isPlaying = false;
+      appState.sessionStatus = 'not_started';
+      showPage('home');
+    }
+  };
+
+  // ── Init ──────────────────────────────────────────
+  function init() {
+    renderHomepage();
+  }
+
+  loadData();
+</script>
+</body>
+</html>
