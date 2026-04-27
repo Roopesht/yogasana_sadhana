@@ -3,7 +3,7 @@
     "id": "warmup-breathing",
     "name": "Warm Up — Deep Breathing",
     "category": "warmup",
-    "photo": "warmup_breathing.svg",
+    "photo": "warmup_breathing.png",
     "steps": [
       "Stand tall with feet hip-width apart and arms relaxed at your sides.",
       "Inhale slowly through your nose for 4 counts, letting your belly rise.",
@@ -18,7 +18,7 @@
     "id": "warmup-neck",
     "name": "Warm Up — Neck Rolls",
     "category": "warmup",
-    "photo": "neckrolls.png",
+    "photo": "warmup_neck.png",
     "steps": [
       "Sit or stand with your spine tall and shoulders relaxed.",
       "Slowly drop your right ear toward your right shoulder. Hold 5 seconds.",
@@ -33,7 +33,7 @@
     "id": "warmup-shoulder",
     "name": "Warm Up — Shoulder Circles",
     "category": "warmup",
-    "photo": "warmup_shoulder.svg",
+    "photo": "warmup_shoulder.png",
     "steps": [
       "Stand with feet hip-width apart, arms loose at your sides.",
       "Lift both shoulders up toward your ears, then roll them back and down.",
@@ -48,7 +48,7 @@
     "id": "warmup-waist",
     "name": "Warm Up — Waist Rotations",
     "category": "warmup",
-    "photo": "warmup_waist.svg",
+    "photo": "warmup_waist.png",
     "steps": [
       "Stand with feet shoulder-width apart, hands on hips.",
       "Keep your hips stable as you rotate your upper body to the right.",
@@ -63,7 +63,7 @@
     "id": "warmup-jogging",
     "name": "Warm Up — Jogging in Place",
     "category": "warmup",
-    "photo": "warmup_jogging.svg",
+    "photo": "  .png",
     "steps": [
       "Begin jogging in place at a comfortable, relaxed pace.",
       "Land softly on the balls of your feet to protect your knees.",
@@ -78,7 +78,7 @@
     "id": "surya-namaskar",
     "name": "Surya Namaskar",
     "category": "asana",
-    "photo": "surya_namaskar.svg",
+    "photo": "surya_namaskar.png",
     "steps": [
       "Begin in Pranamasana (prayer pose) — stand at the mat's edge, feet together, palms at chest.",
       "Inhale: raise arms overhead into Hastauttanasana, gently arching the back.",
@@ -98,7 +98,7 @@
     "id": "matsyasan",
     "name": "Matsyasan",
     "category": "asana",
-    "photo": "matsyasan.svg",
+    "photo": "matsyasan.png",
     "steps": [
       "Lie flat on your back with legs extended and arms alongside your body.",
       "Slide your hands under your hips, palms facing down.",
@@ -115,7 +115,7 @@
     "id": "ardha-matsyendriyasan",
     "name": "Ardha Matsyendriyasan",
     "category": "asana",
-    "photo": "ardha_matsyendriyasan.svg",
+    "photo": "ardha_matsendriyansan.png",
     "steps": [
       "Sit with both legs extended in front of you (Dandasana).",
       "Bend your right knee and place the right foot flat on the floor outside the left thigh.",
@@ -133,7 +133,7 @@
     "id": "ushthrasan",
     "name": "Ushthrasan",
     "category": "asana",
-    "photo": "ushthrasan.svg",
+    "photo": "ushtrasan.png",
     "steps": [
       "Kneel on your mat with knees hip-width apart and thighs perpendicular to the floor.",
       "Place your hands on your lower back, fingers pointing downward, for initial support.",
@@ -150,7 +150,7 @@
     "id": "supta-vajrasan",
     "name": "Supta Vajrasan",
     "category": "asana",
-    "photo": "supta_vajrasan.svg",
+    "photo": "suptavajrasana.png",
     "steps": [
       "Begin in Vajrasana — sit on your heels with the spine straight.",
       "Place your hands behind you, fingers pointing forward, and lean back onto your elbows.",
@@ -167,7 +167,7 @@
     "id": "uttana-padasan",
     "name": "Uttana Padasan",
     "category": "asana",
-    "photo": "uttana_padasan.svg",
+    "photo": "uthana_padhasan.png",
     "steps": [
       "Lie on your back with legs extended and arms flat alongside your body.",
       "Press your lower back firmly into the mat and engage your core.",
@@ -184,7 +184,7 @@
     "id": "naukasan",
     "name": "Naukasan",
     "category": "asana",
-    "photo": "naukasan.svg",
+    "photo": "naukasan.png",
     "steps": [
       "Lie flat on your back with legs together and arms at your sides.",
       "Inhale deeply. On the exhale, simultaneously lift your head, shoulders, arms, and legs off the mat.",
@@ -201,7 +201,7 @@
     "id": "sarvangasan",
     "name": "Sarvangasan",
     "category": "asana",
-    "photo": "sarvangasan.svg",
+    "photo": "sarvangasan.png",
     "steps": [
       "Lie on your back. Bend your knees and draw them toward your chest.",
       "Use your hands to support your lower back as you lift your hips off the floor.",
@@ -218,7 +218,7 @@
     "id": "halasan",
     "name": "Halasan",
     "category": "asana",
-    "photo": "halasan.svg",
+    "photo": "halasan.png",
     "steps": [
       "From Sarvangasan, begin to lower your legs overhead behind you.",
       "Let your toes touch the floor behind your head, if comfortable.",
@@ -235,7 +235,7 @@
     "id": "marjalasan",
     "name": "Marjalasan",
     "category": "asana",
-    "photo": "marjalasan.svg",
+    "photo": "marjalasan.png",
     "steps": [
       "Begin on all fours — wrists under shoulders, knees under hips (Table Top).",
       "Inhale: drop your belly toward the floor, lift your chest and tailbone (Cow).",
@@ -252,7 +252,7 @@
     "id": "dhanurasana",
     "name": "Dhanurasana",
     "category": "asana",
-    "photo": "dhanurasana.svg",
+    "photo": "dhanurasana.png",
     "steps": [
       "Lie on your stomach with your chin resting on the mat, arms at your sides.",
       "Bend both knees and bring your heels toward your buttocks.",
@@ -269,7 +269,7 @@
     "id": "natarajasan",
     "name": "Natarajasan",
     "category": "asana",
-    "photo": "natarajasan.svg",
+    "photo": "natarajasan.png",
     "steps": [
       "Stand tall in Tadasana. Shift your weight onto your left foot.",
       "Bend your right knee and bring the right heel toward your right buttock.",
@@ -286,7 +286,7 @@
     "id": "janu-shirshasan",
     "name": "Janu Shirshasan",
     "category": "asana",
-    "photo": "janu_shirshasan.svg",
+    "photo": "janu_shirshasan.png",
     "steps": [
       "Sit in Dandasana with both legs extended. Bend your right knee.",
       "Place the sole of your right foot against your inner left thigh.",
@@ -303,7 +303,7 @@
     "id": "badha-konasan",
     "name": "Badha Konasan",
     "category": "asana",
-    "photo": "badha_konasan.svg",
+    "photo": "badha_konasan.png",
     "steps": [
       "Sit upright with both legs extended. Bend both knees and bring the soles of your feet together.",
       "Draw your heels as close toward your pelvis as is comfortable.",
@@ -320,7 +320,7 @@
     "id": "katwangasan",
     "name": "Katwangasan",
     "category": "asana",
-    "photo": "katwangasan.svg",
+    "photo": "katwangasan.png",
     "steps": [
       "Begin in Dandasana. Bend both knees and bring them toward your chest.",
       "Lean back slightly, balancing on your tailbone with the spine tall.",
@@ -337,7 +337,7 @@
     "id": "meru-dandasan",
     "name": "Meru Dandasan",
     "category": "asana",
-    "photo": "meru_dandasan.svg",
+    "photo": "meru_dandasan.png",
     "steps": [
       "Lie on your back with arms extended at shoulder level forming a T.",
       "Bend your right knee and place the right foot flat on the floor.",
@@ -354,7 +354,7 @@
     "id": "trataka",
     "name": "Trataka",
     "category": "asana",
-    "photo": "trataka.svg",
+    "photo": "trataka.png",
     "steps": [
       "Sit in a comfortable meditation posture — Sukhasana or Vajrasana.",
       "Place a candle flame at eye level, about 60–90 cm in front of you.",
@@ -371,7 +371,7 @@
     "id": "setu-bandhasana",
     "name": "Setu Bandhasana",
     "category": "asana",
-    "photo": "setu_bandhasana.svg",
+    "photo": "setu_bandhasana.png",
     "steps": [
       "Lie on your back with knees bent, feet flat on the floor hip-width apart.",
       "Place your feet close to your buttocks — about a hand's width away.",
@@ -388,7 +388,7 @@
     "id": "mandukasan",
     "name": "Mandukasan",
     "category": "asana",
-    "photo": "mandukasan.svg",
+    "photo": "mandukasan.png",
     "steps": [
       "Begin in Vajrasana. Make fists with both hands, placing the thumbs inside.",
       "Place both fists on your lower abdomen, on either side of your navel.",
@@ -405,7 +405,7 @@
     "id": "anjaneyasana",
     "name": "Anjaneyasana",
     "category": "asana",
-    "photo": "anjaneyasana.svg",
+    "photo": "anjaneyasana.png",
     "steps": [
       "Start in Downward Dog. Step your right foot forward between your hands.",
       "Lower your left knee to the mat and slide it back until you feel a stretch in the left hip flexor.",
@@ -422,7 +422,7 @@
     "id": "shavasana",
     "name": "Shavasana",
     "category": "cooldown",
-    "photo": "shavasana.svg",
+    "photo": "shavasana.png",
     "steps": [
       "Lie flat on your back, allowing your feet to fall open naturally.",
       "Let your arms rest away from your body, palms facing upward.",

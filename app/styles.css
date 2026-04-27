@@ -32,6 +32,10 @@
       overflow-x: hidden;
     }
 
+    .pose-img {
+      width:400px;
+    }
+
     /* ─── TYPOGRAPHY ─────────────────────────────── */
     h1, h2, h3, h4 { font-family: 'Cormorant Garamond', serif; font-weight: 300; }
     .serif-italic { font-family: 'Cormorant Garamond', serif; font-style: italic; }
